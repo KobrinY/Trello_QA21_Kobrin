@@ -6,6 +6,14 @@ import org.testng.annotations.Test;
 
 public class TeamCreationTests extends TestBase {
 
+    int before= getTeamCounts();
+
+
+    public int getTeamCounts() {
+
+        return driver.findElements(By.cssSelector("")).size();
+    }
+
     @Test
     public void testTeamCreation(){
         Assert.assertTrue(isUserLoggIn());
