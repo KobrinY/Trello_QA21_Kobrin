@@ -8,8 +8,13 @@ public class BoardCreationTests extends TestBase {
 
 @Test
 public void testBoardCreation(){
+
+    //int before = getBoardCount();
+
     clickOnPlusButtonOnHeader();
     selectCreateBoardFromDropDown();
+
+   // String
     fillBoardCreationForm("first 1.2", "gg");
     confimBoardCreation();
 

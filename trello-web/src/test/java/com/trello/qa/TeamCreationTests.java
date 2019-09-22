@@ -7,24 +7,42 @@ import org.testng.annotations.Test;
 
 public class TeamCreationTests extends TestBase {
 
-//    int before= getTeamCounts();
-//
-//
-//    public int getTeamCounts() {
-//
-//        return driver.findElements(By.cssSelector("")).size();
-//    }
-
     @Test
-    public void testTeamCreationFromButtonOnHeader(){
+    public void testTeamCreationFromButtonOnHeader() throws InterruptedException {
 
+        int before= getTeamsCount();
 
         clickOnPlusButtonOnHeader();
         selectCreateTeamFromDropDown();
-        fillTeamCreationForm("first", "descr first");
+
+        String teamName="second";
+        fillTeamCreationForm(teamName, "descr first");
         clickContinueButton();
 
-        Assert.assertTrue(isUserLoggedIn());
+        String createdTeamName=getTeamNameFromPage();
+
+        returnToHomePage();
+        driver.navigate().refresh();
+        int after=getTeamsCount();
+        Assert.assertEquals(after,before+1);
+        Assert.assertEquals(createdTeamName.toLowerCase(),teamName.toLowerCase());
+
+
+       // Assert.assertTrue(isUserLoggedIn());
+    }
+
+    public String getTeamNameFromPage() {
+        return driver.findElement(By.cssSelector("h1")).getText();
+    }
+
+    public void returnToHomePage() throws InterruptedException {
+        Thread.sleep(10000);
+        click(By.cssSelector("a[href='/']"));
+    }
+
+    public int getTeamsCount() {
+
+        return driver.findElements(By.xpath("//*[@class='_mtkwfAlvk6O3f']/../../..//li")).size();
     }
 
 
