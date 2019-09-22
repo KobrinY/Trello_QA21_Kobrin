@@ -48,7 +48,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/cmd/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../kobrin_qa21_home" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -66,13 +66,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="TeamCreationTests.testTeamCreation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.TeamCreationTests.testTeamCreationFromButtonOnHeader">
+    <configuration name="BoardCreationTests.testBoardCreation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/trello-web" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.trello.qa.TeamCreationTests.testTeamCreation&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.trello.qa.BoardCreationTests.testBoardCreation&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -87,9 +87,87 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="TeamCreationTests.testTeamCreationFromButtonOnHeader" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/trello-web" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.trello.qa.TeamCreationTests.testTeamCreationFromButtonOnHeader&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="BoardCreationTests.testBoardCreation" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="trello-web.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.trello.qa.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.trello.qa" />
+      <option name="MAIN_CLASS_NAME" value="com.trello.qa.BoardCreationTests" />
+      <option name="METHOD_NAME" value="testBoardCreation" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TeamCreationTests.testTeamCreationFromButtonOnHeader" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="trello-web.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.trello.qa.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.trello.qa" />
+      <option name="MAIN_CLASS_NAME" value="com.trello.qa.TeamCreationTests" />
+      <option name="METHOD_NAME" value="testTeamCreationFromButtonOnHeader" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testTeam.testTeamCreation" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="trello-web.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.trello.qa.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.trello.qa" />
+      <option name="MAIN_CLASS_NAME" value="com.trello.qa.testTeam" />
+      <option name="METHOD_NAME" value="testTeamCreation" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TeamCreationTests.testTeamCreation" />
+        <item itemvalue="Gradle.TeamCreationTests.testTeamCreationFromButtonOnHeader" />
+        <item itemvalue="Gradle.BoardCreationTests.testBoardCreation" />
+        <item itemvalue="TestNG.BoardCreationTests.testBoardCreation" />
+        <item itemvalue="TestNG.TeamCreationTests.testTeamCreationFromButtonOnHeader" />
+        <item itemvalue="TestNG.testTeam.testTeamCreation" />
       </list>
     </recent_temporary>
   </component>
@@ -111,7 +189,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
