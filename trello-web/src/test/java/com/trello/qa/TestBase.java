@@ -85,7 +85,6 @@ public void tearDown(){
             click(By.xpath("//nav[@class='SdlcRrTVPA8Y3K']//li[1]")); //its no team
         }
 
-        
     }
 
     public void selectCreateBoardFromDropDown() {
