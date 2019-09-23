@@ -67,7 +67,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.TeamCreationTests.testTeamCreationFromButtonOnHeader">
+  <component name="RunManager" selected="TestNG.BoardCreationTests.testBoardCreation">
     <configuration name="BoardCreationTests.testBoardCreation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -164,10 +164,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TeamCreationTests.testTeamCreationFromButtonOnHeader" />
-        <item itemvalue="Gradle.BoardCreationTests.testBoardCreation" />
         <item itemvalue="TestNG.BoardCreationTests.testBoardCreation" />
         <item itemvalue="TestNG.TeamCreationTests.testTeamCreationFromButtonOnHeader" />
+        <item itemvalue="Gradle.TeamCreationTests.testTeamCreationFromButtonOnHeader" />
+        <item itemvalue="Gradle.BoardCreationTests.testBoardCreation" />
         <item itemvalue="TestNG.testTeam.testTeamCreation" />
       </list>
     </recent_temporary>
