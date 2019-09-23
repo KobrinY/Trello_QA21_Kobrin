@@ -3,6 +3,9 @@ package com.trello.qa;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -60,9 +63,14 @@ public void openSite(String url) {
         click(By.cssSelector("[data-test-id='header-create-menu-button']"));
     }
 
-    public void returnToHomePage() throws InterruptedException {
-        Thread.sleep(10000);
-        click(By.cssSelector("a[href='/']"));
+    public void returnToHomePage() {
+        if(isElementPresent(By.cssSelector("._3gUubwRZDWaOF0._2WhIqhRFBTG7Ry._2NubQcQM83YCVV"))){
+            new WebDriverWait(driver, 15)
+                    .until(ExpectedConditions.stalenessOf(driver.findElement(By.cssSelector("._3gUubwRZDWaOF0._2WhIqhRFBTG7Ry._2NubQcQM83YCVV"))));
+            click(By.cssSelector("a[href='/']"));
+            click(By.cssSelector("a[href='/']"));
+        } else
+            click(By.cssSelector("a[href='/']"));
     }
 
     public void refreshPage() {
@@ -89,14 +97,16 @@ public void openSite(String url) {
     }
 
     public int getTeamsCount() throws InterruptedException {
-        Thread.sleep(5000);
+        //Thread.sleep(5000);
+        new WebDriverWait(driver,10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@class='_mtkwfAlvk6O3f']/../../..//li")));
         return driver.findElements(By.xpath("//*[@class='_mtkwfAlvk6O3f']/../../..//li")).size();
     }
 
 //------------------------------------------------------------------------------------------
 
     public int getBoardCount() throws InterruptedException {
-    Thread.sleep(5000);
+    //Thread.sleep(5000);
+    new WebDriverWait(driver,10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h3[contains(.,'Personal Boards')]/../..//li")));
     return driver.findElements(By.xpath("//h3[contains(.,'Personal Boards')]/../..//li")).size();
     }
 
